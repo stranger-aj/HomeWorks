@@ -10,10 +10,10 @@ print(data)
 # data_one_hot = pd.get_dummies(data['whoAmI'])
 # print(data_one_hot.head())
 
-data.loc[(data['whoAmI'] == 'robot'), 'robot'] = '1'
-data.loc[(data['whoAmI'] != 'robot'), 'robot'] = '0'
-data.loc[(data['whoAmI'] == 'human'), 'human'] = '1'
-data.loc[(data['whoAmI'] != 'human'), 'human'] = '0'
+data.loc[(data['whoAmI'] == 'robot'), 'robot'] = True
+data.loc[(data['whoAmI'] != 'robot'), 'robot'] = False
+data.loc[(data['whoAmI'] == 'human'), 'human'] = True
+data.loc[(data['whoAmI'] != 'human'), 'human'] = False
 result = data[['human', 'robot']]
 
 print(result)
